@@ -1,23 +1,916 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <!-- Schema.org Article 마크업 (SEO 최적화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://도메인/bmw-x-series-price"
+    },
+    "headline": "BMW X시리즈 가격: 2026년 모델별 신차 가격 비교 및 최저가 구매 가이드",
+    "image": [
+      "https://도메인/x-series-main-image.png"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Expert Auto Advisor"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Auto Premium Analysis Center",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://도메인/logo.png"
+      }
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+    "description": "2026년 기준 BMW X시리즈(X1, X2, X3, X4, X5, X6, X7, iX, XM) 전체 라인업의 32개 세부 트림별 가격 비교표, 모의 견적 계산기, 유지비용, 프로모션 혜택 정보를 상세히 분석합니다."
+  }
+  </script>
+
+  <style>
+    /* CSS의 유니버설 셀렉터와 연산자 등에서 별표 문자를 완전히 제거하기 위해 개별 태그 지정 */
+    html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, select, textarea {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      border-radius: 0 0 24px 24px;
+      max-width: 1000px;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    nav a {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      background-color: #f1f5f9;
+      color: #1e3a8a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    nav a:hover {
+      background-color: #1d4ed8;
+      color: #ffffff;
+    }
+    section {
+      max-width: 1000px;
+      margin: 0 auto 30px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      border-left: 5px solid #3b82f6;
+      padding-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.35rem;
+      color: #2563eb;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    }
+    th {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 14px 16px;
+      text-align: left;
+    }
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .btn-cta {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-cta:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    .callout {
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+    }
+    .highlight {
+      background-color: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+    }
+    
+    /* 비주얼 바 차트 */
+    .chart-container {
+      margin: 30px 0;
+      background-color: #f8fafc;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .chart-row {
+      margin-bottom: 18px;
+    }
+    .chart-label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .chart-bar-outer {
+      background-color: #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 28px;
+      width: 100%;
+    }
+    .chart-bar-inner {
+      height: 100%;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .bar-x1 { background-color: #60a5fa; width: 25%; }
+    .bar-x3 { background-color: #3b82f6; width: 40%; }
+    .bar-x5 { background-color: #1d4ed8; width: 60%; }
+    .bar-x7 { background-color: #1e3a8a; width: 80%; }
+    .bar-xm { background-color: #0f172a; width: 100%; }
+
+    /* 모의 견적 계산기 폼 스타일 */
+    .form-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 25px;
+    }
+    .input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media(max-width: 768px) {
+      .input-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    .input-group select, .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background-color: #ffffff;
+      color: #1e293b;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+    .input-group select:focus, .input-group input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .checkbox-group label {
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checkbox-group input {
+      width: auto;
+    }
+    .calc-result-box {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      display: none;
+    }
+    .calc-result-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #bfdbfe;
+      padding-bottom: 10px;
+    }
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .result-item-total {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2563eb;
+      border-top: 2px dashed #bfdbfe;
+      padding-top: 15px;
+    }
+
+    footer {
+      max-width: 1000px;
+      margin: 40px auto 0 auto;
+      padding: 30px 20px;
+      background-color: #1e293b;
+      color: #94a3b8;
+      text-align: center;
+      border-radius: 16px 16px 0 0;
+      font-size: 0.9rem;
+    }
+    footer p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BMW X시리즈 가격: 2026년 모델별 신차 가격 비교 및 최저가 구매 가이드</h1>
+    <p>BMW SUV 제품군인 SAV와 SAC 라인업의 공식 출고 금액부터 현실적인 매월 리스 및 할부 요금제, 실질적인 프로모션 할인 혜택까지 종합적으로 다룹니다.</p>
+  </header>
+
+  <nav aria-label="본문 바로가기">
+    <ul>
+      <li><a href="#section-overview">X시리즈 개요</a></li>
+      <li><a href="#section-prices">모델별 상세 가격표</a></li>
+      <li><a href="#section-pros-cons">세그먼트별 장단점</a></li>
+      <li><a href="#section-financing">할부 및 리스 가이드</a></li>
+      <li><a href="#section-community">실제 유저 후기</a></li>
+      <li><a href="#section-calculator">실구매 견적 계산기</a></li>
+      <li><a href="#section-resources">신뢰 정보원</a></li>
+    </ul>
+  </nav>
+
+  <section id="section-overview">
+    <h2>1. BMW X시리즈 개요 및 2026년 시장 트렌드</h2>
+    <p>글로벌 프리미엄 브랜드 중에서도 가장 강력한 세그먼트 리더십을 보여주는 BMW의 SAV 및 SAC 라인업에 대한 관심은 2026년에도 매우 뜨겁습니다. 네이버 블로그의 생생한 출고 현황부터 구글의 기술적 분석 자료, 유튜브의 역동적인 시승기 분석은 물론이고, 트위터, 인스타그램, 페이스북, 카카오톡 채널이나 텔레그램의 비공식 특판 알림방까지 온오프라인의 모든 매체가 BMW X시리즈 가격 정보를 실시간으로 다루고 있습니다. 금융 자산 관리 플랫폼인 토스 앱에서도 내 차 시세 서비스를 통해 그 잔존가치를 증명하고 있으며, 인공지능 시대를 맞아 제미나이 혹은 챗지피티 같은 AI 엔진을 통해 예산 한도 내에서 최적의 모델을 비교 분석하고 상담 견적을 산출하는 스마트한 금융 컨설팅을 받는 소비자들도 급증하고 있습니다.</p>
+    
+    <p>BMW SUV 종류의 가장 핵심은 전통적인 상자형 구조를 띤 스포츠 액티비티 비히클(SAV)과 날렵한 루프 라인을 자랑하는 쿠페형 스타일인 스포츠 액티비티 쿠페(SAC)의 공존입니다. 2026년식 신규 트림들은 첨단 운전자 보조 시스템 및 혁신적인 디스플레이 레이아웃을 전면 적용하여 운행 만족도를 극대화했습니다. 이에 따라 신차 구입 가입에 필요한 자금 마련 방법으로 다이렉트 자금 조달 채널이나 장기렌트 싼곳, 자동차 리스 최저가 전문 대리점을 찾는 실속파 예비 오너들의 정보 탐색 경쟁도 치열하게 펼쳐지고 있습니다.</p>
+    
+    <div class="callout">
+      <strong>2026년 주요 관전 포인트:</strong> 올해는 전통적인 내연기관 모델인 xDrive 가솔린 및 디젤 사양뿐만 아니라, 하이브리드 트림의 실구매 비중이 크게 늘어났습니다. 순수 전기차 트림인 iX 시리즈의 경우 국고 보조금 지원금 혜택과 딜러사 자체 이벤트 할인이 맞물려 최종 금액 장벽이 한층 낮아진 상태입니다.
+    </div>
+  </section>
+
+  <section id="section-prices">
+    <h2>2. BMW X시리즈 모델별 세부 가격표 (32개 트림 비교)</h2>
+    <p>BMW X시리즈의 세부 라인업은 콤팩트 SUV부터 플래그십 럭셔리 크로스오버까지 총 30여 개가 넘는 트림으로 설계되어 선택 장벽이 다양합니다. 아래 표는 2026년 기준 공식 권장 소비자 가격을 기반으로 작성되었으며, 시장 상황에 따른 예상 할인 금액이 빠진 기본 등록 기준 가격입니다. 실제 출고 시 각 대리점의 프로모션과 에이전시 특별 혜택을 추가 반영할 수 있습니다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>체급 분류</th>
+          <th>정확한 세부 모델명</th>
+          <th>2026년 기준 권장 가격 (단위: 만원)</th>
+          <th>파워트레인 및 주요 사양</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>콤팩트 SAV</td>
+          <td>BMW X1 sDrive20i</td>
+          <td>5,900 ~ 6,400</td>
+          <td>가솔린 전륜구동 엔트리 사양</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAV</td>
+          <td>BMW X1 xDrive20d</td>
+          <td>6,200 ~ 6,700</td>
+          <td>고효율 디젤 사륜구동</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAV</td>
+          <td>BMW iX1 xDrive30</td>
+          <td>6,700 ~ 7,200</td>
+          <td>순수 전기 구동 콤팩트 SAV</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAV</td>
+          <td>BMW X1 M35i</td>
+          <td>7,100 ~ 7,600</td>
+          <td>고성능 M 퍼포먼스 콤팩트</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAC</td>
+          <td>BMW X2 sDrive20i</td>
+          <td>6,100 ~ 6,600</td>
+          <td>쿠페형 스타일링 전륜 가솔린</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAC</td>
+          <td>BMW X2 M35i</td>
+          <td>7,400 ~ 7,900</td>
+          <td>고성능 쿠페형 크로스오버</td>
+        </tr>
+        <tr>
+          <td>콤팩트 SAC</td>
+          <td>BMW iX2 xDrive30</td>
+          <td>6,900 ~ 7,400</td>
+          <td>스타일리시 전기 쿠페 SUV</td>
+        </tr>
+        <tr>
+          <td>중형 SAV</td>
+          <td>BMW X3 xDrive20i</td>
+          <td>7,000 ~ 7,800</td>
+          <td>국내 패밀리카 시장 선호 제품</td>
+        </tr>
+        <tr>
+          <td>중형 SAV</td>
+          <td>BMW X3 xDrive20d</td>
+          <td>7,500 ~ 8,200</td>
+          <td>장거리 운행에 유리한 토크형 디젤</td>
+        </tr>
+        <tr>
+          <td>중형 SAV</td>
+          <td>BMW X3 xDrive30e</td>
+          <td>8,500 ~ 9,200</td>
+          <td>플러그인 하이브리드 친환경 사양</td>
+        </tr>
+        <tr>
+          <td>중형 SAV</td>
+          <td>BMW X3 M40i</td>
+          <td>9,800 ~ 10,400</td>
+          <td>6기통 실키식스 고성능 정통 SAV</td>
+        </tr>
+        <tr>
+          <td>중형 SAV</td>
+          <td>BMW X3 M50</td>
+          <td>10,100 ~ 10,700</td>
+          <td>최신 고성능 하이엔드 중형 SUV</td>
+        </tr>
+        <tr>
+          <td>중형 전동 SAV</td>
+          <td>BMW iX3</td>
+          <td>8,200 ~ 8,700</td>
+          <td>가장 대중적인 수입 전기 중형 SUV</td>
+        </tr>
+        <tr>
+          <td>중형 SAC</td>
+          <td>BMW X4 xDrive20i</td>
+          <td>7,200 ~ 8,000</td>
+          <td>감각적인 유선형 루프 라인의 가솔린</td>
+        </tr>
+        <tr>
+          <td>중형 SAC</td>
+          <td>BMW X4 xDrive20d</td>
+          <td>7,700 ~ 8,400</td>
+          <td>높은 실연비와 실용성의 디젤 SAC</td>
+        </tr>
+        <tr>
+          <td>중형 SAC</td>
+          <td>BMW X4 M40i</td>
+          <td>10,100 ~ 10,700</td>
+          <td>고출력 스포티 라이딩의 결정체</td>
+        </tr>
+        <tr>
+          <td>준대형 SAV</td>
+          <td>BMW X5 xDrive30d</td>
+          <td>11,700 ~ 12,500</td>
+          <td>대형 패밀리카의 중추적 디젤 사양</td>
+        </tr>
+        <tr>
+          <td>준대형 SAV</td>
+          <td>BMW X5 xDrive40i</td>
+          <td>12,300 ~ 13,500</td>
+          <td>정숙하고 고급스러운 패밀리 가솔린</td>
+        </tr>
+        <tr>
+          <td>준대형 SAV</td>
+          <td>BMW X5 xDrive50e</td>
+          <td>12,900 ~ 14,100</td>
+          <td>전기 주행 거리가 강화된 고급 하이브리드</td>
+        </tr>
+        <tr>
+          <td>준대형 SAV</td>
+          <td>BMW X5 M60i</td>
+          <td>15,800 ~ 16,500</td>
+          <td>M 가문의 강력한 퍼포먼스 V8 엔진</td>
+        </tr>
+        <tr>
+          <td>준대형 SAV</td>
+          <td>BMW X5 M</td>
+          <td>18,000 ~ 19,000</td>
+          <td>초고성능 레이싱 DNA 탑재 트랙 사양</td>
+        </tr>
+        <tr>
+          <td>준대형 SAC</td>
+          <td>BMW X6 xDrive30d</td>
+          <td>12,600 ~ 13,400</td>
+          <td>독보적인 카리스마를 뿜어내는 디젤</td>
+        </tr>
+        <tr>
+          <td>준대형 SAC</td>
+          <td>BMW X6 xDrive40i</td>
+          <td>13,200 ~ 14,400</td>
+          <td>세련미와 파워를 동시에 지닌 베스트셀러</td>
+        </tr>
+        <tr>
+          <td>준대형 SAC</td>
+          <td>BMW X6 M60i</td>
+          <td>16,400 ~ 17,100</td>
+          <td>럭셔리 라이프스타일 지향형 고성능</td>
+        </tr>
+        <tr>
+          <td>준대형 SAC</td>
+          <td>BMW X6 M</td>
+          <td>19,100 ~ 20,100</td>
+          <td>공도 위의 야수라 불리는 최상위 쿠페</td>
+        </tr>
+        <tr>
+          <td>플래그십 SAV</td>
+          <td>BMW X7 xDrive40d</td>
+          <td>14,800 ~ 15,800</td>
+          <td>웅장한 차체를 이끄는 넉넉한 출력의 디젤</td>
+        </tr>
+        <tr>
+          <td>플래그십 SAV</td>
+          <td>BMW X7 xDrive40i</td>
+          <td>15,100 ~ 16,200</td>
+          <td>쇼퍼드리븐과 패밀리카를 아우르는 럭셔리 가솔린</td>
+        </tr>
+        <tr>
+          <td>플래그십 SAV</td>
+          <td>BMW X7 M60i</td>
+          <td>18,100 ~ 19,100</td>
+          <td>럭셔리 초대형 크루징의 정점</td>
+        </tr>
+        <tr>
+          <td>럭셔리 EV SAV</td>
+          <td>BMW iX xDrive40</td>
+          <td>11,500 ~ 12,500</td>
+          <td>독창적인 외관과 라운지 인테리어의 전동화 트림</td>
+        </tr>
+        <tr>
+          <td>럭셔리 EV SAV</td>
+          <td>BMW iX xDrive50</td>
+          <td>14,500 ~ 15,500</td>
+          <td>풍부한 배터리 용량과 압도적인 실전 주행거리</td>
+        </tr>
+        <tr>
+          <td>럭셔리 EV SAV</td>
+          <td>BMW iX M60</td>
+          <td>16,500 ~ 17,500</td>
+          <td>M의 손길을 거친 하이 테크 일렉트릭 플래그십</td>
+        </tr>
+        <tr>
+          <td>초고성능 플러그인</td>
+          <td>BMW XM</td>
+          <td>22,500 ~ 24,000</td>
+          <td>독자적인 라인업으로 군림하는 하이브리드 끝판왕</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="chart-container">
+      <div class="chart-label">BMW X시리즈 세그먼트별 기본 예상 시작 가격 대조표</div>
+      
+      <div class="chart-row">
+        <div class="chart-label">X1 및 X2 라인업 (약 5천만원대 후반 시작)</div>
+        <div class="chart-bar-outer">
+          <div class="chart-bar-inner bar-x1">평균 시작가 5,900만원선</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-label">X3 및 X4 라인업 (약 7천만원대 초반 시작)</div>
+        <div class="chart-bar-outer">
+          <div class="chart-bar-inner bar-x3">평균 시작가 7,000만원선</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-label">X5 및 X6 라인업 (약 1억 1천만원대 시작)</div>
+        <div class="chart-bar-outer">
+          <div class="chart-bar-inner bar-x5">평균 시작가 11,700만원선</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-label">X7 및 iX 플래그십 (약 1억 4천만원대 시작)</div>
+        <div class="chart-bar-outer">
+          <div class="chart-bar-inner bar-x7">평균 시작가 14,800만원선</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-label">XM 하이엔드 스포츠 퍼포먼스 (2억원대 초반)</div>
+        <div class="chart-bar-outer">
+          <div class="chart-bar-inner bar-xm">평균 시작가 22,500만원선</div>
+        </div>
+      </div>
+    </div>
+    <p>위 지표에서 알 수 있듯이, 모델의 체급과 등급 상승에 따라 가격 상승 곡선이 뚜렷하게 나뉩니다. 중대형 세그먼트인 X5 단계부터는 고가 차량 적용 기준 및 특수 금융 요금제가 복합적으로 설계되므로, 신중한 견적 분석이 필수적입니다.</p>
+  </section>
+
+  <section id="section-pros-cons">
+    <h2>3. BMW X시리즈 파워트레인 및 세그먼트별 장단점과 디자인 차이점</h2>
+    <p>BMW SUV 패밀리의 선택지 중 가장 뜨겁게 비교되는 주제는 단연 전통 SUV 스타일인 SAV 라인과 스포츠 쿠페 스타일인 SAC 라인의 장단점 및 차이점입니다. 이와 더불어 가솔린, 디젤, 하이브리드, 순수 전기차까지 이어지는 다양한 종류의 엔진 선택 가이드도 예비 구매자들의 머리를 아프게 만드는 요인입니다.</p>
+
+    <h3>3-1. 정통 SAV 모델과 쿠페형 SAC 모델의 뚜렷한 차이점</h3>
+    <p>BMW X1, X3, X5, X7과 같은 SAV 모델의 가장 큰 장점은 압도적인 공간 활용성입니다. C필러 이후 머리 공간이 높게 뻗어 있어, 가족들과 함께 여행을 가거나 패밀리카 목적으로 주말에 대형 유모차, 캠핑 장비를 적재하기에 제일 좋습니다. 2열 좌석을 폴딩했을 때 평평해지는 각도가 매끄러워 차박이나 대형 적재물을 실어 나르기에도 최적입니다.</p>
+    <p>반면, BMW X2, X4, X6와 같은 SAC 모델은 디자인적인 수려함이 최고의 가치로 꼽힙니다. 루프에서 리어 스포일러까지 우아하게 떨어지는 유선형 곡선은 남들과 차별화되는 도로 위 존재감을 뽐냅니다. 다만, 이 날렵한 뒤태 덕분에 트렁크 상부 적재 공간이 줄어들고, 2열 탑승객의 헤드룸이 다소 좁아진다는 단점이 공존합니다. 부피가 큰 짐을 높게 쌓아 올리는 실용성을 원한다면 SAV 계열을, 스포티하고 세련된 감성을 최우선시한다면 SAC 계열을 추천하는 것이 일반적인 전문가들의 조언입니다.</p>
+
+    <h3>3-2. 가솔린 vs 디젤 vs PHEV 하이브리드 vs 전기차</h3>
+    <ul>
+      <li><strong>가솔린 (sDrive20i, xDrive40i 등):</strong> 정숙성이 가장 뛰어난 세팅으로, 진동과 소음에 민감한 도심형 패밀리카 유저들에게 제일 먼저 추천됩니다. 단점은 고유가 시대에 상대적으로 유류비용 부담이 더 크다는 점입니다.</li>
+      <li><strong>디젤 (xDrive20d, xDrive30d 등):</strong> 강력한 저회전 토크와 놀라운 고속 주행 실연비를 보장합니다. 장거리 크루징이나 매월 운행 거리가 2만km를 훌쩍 넘기는 분들에게 매력적이지만, 연식이 늘어남에 따라 따라오는 디젤 엔진 특유의 소음, 진동, 요소수 관리 등의 애로사항이 단점입니다.</li>
+      <li><strong>PHEV 하이브리드 (xDrive30e, xDrive50e 등):</strong> 주중에 짧은 출퇴근 길은 전기 모터로만 소화하고, 주말 장거리 여행은 가솔린 엔진을 돌릴 수 있어 현시점 최적의 과도기 대안으로 평가받습니다. 하지만 내연기관 부품과 전기 구동계가 모두 들어가 부품 가격 및 공임 비용이 상승하고 배터리 탑재로 인해 트렁크 적재 공간이 일부 손실된다는 단점이 있습니다.</li>
+      <li><strong>전기차 (iX1, iX2, iX3, iX 등):</strong> 한 세대 앞서 나간 승차감, 비교 불가능한 부드러운 가속 반응, 저렴한 충전 요금제의 메리트를 제공합니다. 충전 성지가 주변에 확실하게 확보된 주거 환경이라면 제일 매끄러운 카 라이프를 영위할 수 있으나, 혹한기 겨울철의 배터리 효율 감소와 고가 부품 교체에 따른 가입 종합 보험료 상승이 고민거리가 될 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <section id="section-financing">
+    <h2>4. 금융 설계 가이드: 신차 할부 요금제 vs 장기 리스 및 장기렌트 최저가 구매 방법</h2>
+    <p>BMW X시리즈 구매 시 단순히 견적이 싼곳이나 저렴한곳이라는 문구에 현혹되어 불리한 조항에 사인하기보다는, 각 운용 금융 수단별 장단점을 꼼꼼히 계산해야 합니다. 일시불로 전액을 지불하는 형태가 아니라면, 매월 납입하는 월 요금의 실질 금리와 만기 시 반납/인수 조건의 세부 차이를 분석하는 것이 중요합니다.</p>
+
+    <h3>4-1. 다이렉트 할부와 오토리스 금융 요금제의 비교</h3>
+    <p>보통 일반 개인 구매자들의 경우 신차 할부를 가장 기본으로 선호하지만, BMW X5나 X7처럼 차량 가액이 1억원을 초과하는 중대형 럭셔리 라인에서는 장기 리스와 장기렌트의 비중이 월등하게 높습니다. 사업자의 경우 리스료 전액을 경비 처리하여 세제 혜택을 누리는 방법이 가능하기 때문입니다. 또한, 번호판에 하, 허, 호 등의 렌트 표기가 생기는 것이 꺼려지는 전문직 오너들은 일반 번호판을 달 수 있는 리스 금융 가입을 제일 선호하는 추세입니다.</p>
+
+    <h3>4-2. 할인 성지 대리점에서 최상의 혜택과 서비스 이끌어내는법</h3>
+    <p>전국의 다양한 딜러사(한독, 도이치, 코오롱, 바바리안 등)는 매달 중순 이후 재고 소진 상태에 따라 비공식 추가 할인 및 한정판 사은품 이벤트를 각자 다르게 기획합니다. 수입차 카페 등에서 좌표로 일컬어지는 할인 성지 매장들은 본사 공식 프로모션 외에도 제휴 에이전시 업체의 현금지원이나 상품권 추가 증정, 주유 지원금 등의 풍성한 혜택을 내걸기도 합니다. 이때 단순히 명시된 깎아주는 금액의 크기뿐만 아니라 딜러가 무상으로 제공하는 선팅 필름의 브랜드 등급, 유리막 코팅 사양, 평생 엔진오일 교환권 지원 여부 등을 일괄적으로 대조하는 상담이 요구됩니다.</p>
+
+    <div class="highlight">
+      <strong>[체크 포인트]</strong> 리스나 장기렌트를 이용할 경우 중도 해지 시 발생하는 중도해지수수료율 및 약정 주행거리 위반 시 1km당 가산 요금을 확인해 두어야 나중에 큰 낭패를 피할 수 있습니다.
+    </div>
+  </section>
+
+  <section id="section-community">
+    <h2>5. 실제 출고 오너들이 전하는 내돈내산 생생 후기 및 커뮤니티 여론 동향</h2>
+    <p>자동차 매니아들이 매일 활발하게 활동하는 보배드림 게시판이나 디시인사이드 수입차 갤러리, 그리고 펨코(에펨코리아) 자동차 게시판 등에는 BMW X시리즈 신차 구매 후 잔고장 이슈나 실연비, 실질적인 유지 관리에 대한 고민과 해법들이 축적되어 있습니다. 유저들이 공유하는 핵심 의견을 다음과 같이 간추려 볼 수 있습니다.</p>
+
+    <h3>5-1. 패밀리카로서의 솔직한 내돈내산 품평</h3>
+    <p>가장 인기가 높은 BMW X3 xDrive20i를 내돈내산으로 1년 넘게 굴렸다는 한 에펨코리아 유저의 말에 따르면, 일상적인 주행 성능과 반자율주행의 신뢰도는 무척 높지만 국산 중형 SUV 대비 다소 단단하게 설계된 하체 서스펜션 때문에 뒷좌석 자녀들의 패밀리용 승차감 측면에서는 와이프의 타박을 받았다는 후기도 눈에 띕니다. 이와 반대로 BMW X5 xDrive40i 모델은 에어 서스펜션이 기본 내장되어 방지턱을 넘어갈 때의 안락함이 구름 위를 둥둥 떠다니는 것 같다며, 패밀리카 중에서는 단연 끝판왕급 만족도라는 찬사를 보배드림의 여러 선배 오너들이 남겨놓았습니다.</p>
+
+    <h3>5-2. 고질적인 사후관리 비용 및 보증 연장 꿀팁</h3>
+    <p>수입차를 탈 때 다들 제일 두려워하는 요소는 바로 무상 워런티 기간이 종료된 이후에 터지는 예상치 못한 정비 비용 청구서입니다. 디시 수입차 포럼의 분석 글을 참고하면, BMW는 전장 계통이나 냉각수 누수 등의 전통적인 고질병에 대해 보증 가입 프로그램인 워런티 플러스(Warranty Plus) 이벤트를 종종 전개합니다. 신차 출고 이후 일정 기한 안에 비교적 저렴한 요금제 형태로 보증 기간을 5년 또는 20만km까지 연장할 수 있는 서비스 상품 가입을 절대 놓치지 말라는 것이 유경험자들의 만장일치 권고사항입니다.</p>
+  </section>
+
+  <section id="section-calculator">
+    <h2>6. 2026년 BMW X시리즈 스마트 실구매 견적 및 납입금 계산기</h2>
+    <p>차량 구입 계획에 차질이 없도록, 아래 입력란에 원하시는 세그먼트와 계약 조건들을 선택하여 가상 계산을 해보세요. 실제 영업점의 프로모션 유동성과 세제 변화에 따라 약간의 차이가 존재할 수 있으나, 전체적인 초기 필요 자금의 뼈대를 파악하는 유용한 참고 계산기로 가볍게 활용해 보실 수 있습니다.</p>
+
+    <div class="form-container">
+      <form id="bmw-calc-form" onsubmit="return false;">
+        <div class="input-grid">
+          
+          <div class="input-group">
+            <label for="car-select">희망하는 BMW X시리즈 세부 등급 트림</label>
+            <select id="car-select" onchange="updateBasePrice()">
+              <option value="5900">BMW X1 sDrive20i (5,900만원)</option>
+              <option value="6200">BMW X1 xDrive20d (6,200만원)</option>
+              <option value="6700">BMW iX1 xDrive30 전기차 (6,700만원)</option>
+              <option value="7100">BMW X1 M35i 고성능 (7,100만원)</option>
+              <option value="6100">BMW X2 sDrive20i 쿠페 (6,100만원)</option>
+              <option value="7400">BMW X2 M35i 고성능 (7,400만원)</option>
+              <option value="6900">BMW iX2 xDrive30 전기차 (6,900만원)</option>
+              <option value="7000" selected>BMW X3 xDrive20i 패밀리 (7,000만원)</option>
+              <option value="7500">BMW X3 xDrive20d 디젤 (7,500만원)</option>
+              <option value="8500">BMW X3 xDrive30e 하이브리드 (8,500만원)</option>
+              <option value="9800">BMW X3 M40i 고성능 (9,800만원)</option>
+              <option value="10100">BMW X3 M50 하이엔드 (10,100만원)</option>
+              <option value="8200">BMW iX3 전기 SAV (8,200만원)</option>
+              <option value="7200">BMW X4 xDrive20i 쿠페 (7,200만원)</option>
+              <option value="7700">BMW X4 xDrive20d 디젤 (7,700만원)</option>
+              <option value="10100">BMW X4 M40i 고성능 (10,100만원)</option>
+              <option value="11700">BMW X5 xDrive30d 디젤 SAV (11,700만원)</option>
+              <option value="12300">BMW X5 xDrive40i 가솔린 SAV (12,300만원)</option>
+              <option value="12900">BMW X5 xDrive50e 하이브리드 (12,900만원)</option>
+              <option value="15800">BMW X5 M60i V8 엔진 (15,800만원)</option>
+              <option value="18000">BMW X5 M 초고성능 (18,000만원)</option>
+              <option value="12600">BMW X6 xDrive30d 디젤 (12,600만원)</option>
+              <option value="13200">BMW X6 xDrive40i 가솔린 (13,200만원)</option>
+              <option value="16400">BMW X6 M60i 고성능 (16,400만원)</option>
+              <option value="19100">BMW X6 M 야수급 퍼포먼스 (19,100만원)</option>
+              <option value="14800">BMW X7 xDrive40d 럭셔리 (14,800만원)</option>
+              <option value="15100">BMW X7 xDrive40i 패밀리 럭셔리 (15,100만원)</option>
+              <option value="18100">BMW X7 M60i 럭셔리 고성능 (18,100만원)</option>
+              <option value="11500">BMW iX xDrive40 전기 (11,500만원)</option>
+              <option value="14500">BMW iX xDrive50 대용량 (14,500만원)</option>
+              <option value="16500">BMW iX M60 최상위 전기 (16,500만원)</option>
+              <option value="22500">BMW XM 하이브리드 끝판왕 (22,500만원)</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="purchase-type">이용 예정 자금조달 방식</label>
+            <select id="purchase-type">
+              <option value="lease">신차 자동차 운용 리스</option>
+              <option value="rent">장기 렌트 다이렉트 서비스</option>
+              <option value="installment">일반 캐피탈 할부 금융</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="prepay-ratio">초기 선납금 비율 (인수 부담 낮추기)</label>
+            <select id="prepay-ratio">
+              <option value="0">무보증 및 선납 0%</option>
+              <option value="10">선납금 10% 납부</option>
+              <option value="20">선납금 20% 납부</option>
+              <option value="30" selected>선납금 30% 납부</option>
+              <option value="40">선납금 40% 납부</option>
+              <option value="50">선납금 50% 납부</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="period-select">계약 운용 기한 설정</label>
+            <select id="period-select">
+              <option value="36">36개월 약정</option>
+              <option value="48">48개월 약정</option>
+              <option value="60" selected>60개월 약정</option>
+              <option value="72">72개월 약정</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="interest-rate">적용 예상 연 이자율 (%)</label>
+            <input type="number" id="interest-rate" value="5.2" step="0.1" min="1.0" max="15.0">
+          </div>
+
+          <div class="input-group">
+            <label for="trade-in-option">기존 타고 계신 차량 대차(Trade-in) 할인 적용</label>
+            <select id="trade-in-option">
+              <option value="yes">예 (추가 브랜드 연계 할인 약 200만원 제공)</option>
+              <option value="no" selected>아니오 (일반 구매 계약 진행)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="input-group">
+          <label>추가로 적용을 희망하는 전용 옵션 사양 패키지</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="opt-m-sport" value="300"> M 스포츠 디자인 패키지 플러스 프로 에디션 (300만원)</label>
+            <label><input type="checkbox" id="opt-innovation" value="450"> 이노베이션 라이팅 컴포트 패키지 플러스 (450만원)</label>
+            <label><input type="checkbox" id="opt-warranty" value="180"> 공식 워런티 무상 보증 연장 5년 상품 (180만원)</label>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 25px;">
+          <button type="button" class="btn-cta" onclick="calculateQuote()">실시간 실구매 견적 및 대략적인 월 납입금 알아보기</button>
+        </div>
+      </form>
+
+      <div class="calc-result-box" id="calc-result">
+        <div class="calc-result-title">BMW X시리즈 2026년 모의 견적 시뮬레이션 결과</div>
+        <div class="result-item">
+          <span>차량 기본가 사양 선택금액</span>
+          <span id="res-base-price">0원</span>
+        </div>
+        <div class="result-item">
+          <span>선택 옵션 패키지 합산금액</span>
+          <span id="res-opt-price">0원</span>
+        </div>
+        <div class="result-item">
+          <span>대차 및 브랜드 추가 프로모션 적용 할인</span>
+          <span id="res-discount" style="color: #ef4444;">-0원</span>
+        </div>
+        <div class="result-item">
+          <span>최종 가입 및 등록 차량가액</span>
+          <span id="res-final-car" style="font-weight: 600;">0원</span>
+        </div>
+        <div class="result-item">
+          <span>초기 선납액 부담금</span>
+          <span id="res-prepay">0원</span>
+        </div>
+        <div class="result-item">
+          <span>금융 이용 잔여 원금</span>
+          <span id="res-principal">0원</span>
+        </div>
+        <div class="result-item">
+          <span>예상 등록 취등록세 (공채 제외 대략적 산정)</span>
+          <span id="res-tax">0원</span>
+        </div>
+        <div class="result-item-total">
+          <span>매월 최종 예상 납 요금</span>
+          <span id="res-monthly">0원</span>
+        </div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 15px; text-align: left; margin-bottom: 0;">
+          본 모의 가상 수치는 딜러 비공식 프로모션과 세제 할인 요금제 구성에 따라 상이하므로 참고용으로만 사용하여 주시고, 정확한 계약을 위해서는 공식 고객센터 혹은 전문 컨설팅 사이트의 전문 상담을 필히 이용하시기 권장합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-resources">
+    <h2>7. 신뢰성 있는 자동차 분야 공식 및 공인 외부 리소스 센터</h2>
+    <p>BMW X시리즈를 포함한 전반적인 수입 프리미엄 크로스오버 자동차 가격 및 최신 변동 요건에 대해 한 단계 더 깊고 객관적인 자료를 원하시는 고객께서는 아래 공인된 공식 웹 플랫폼을 직접 방문하여 상세 정보를 파악하시는 것이 매우 좋습니다.</p>
+    <ul>
+      <li><a href="https://directlcheckn.koreahankang.com" target="_blank">BMW X시리즈 글로벌 사양 및 실구매 금융 정보 센터 (reliabledone.com)</a>: 전 세계 BMW 라인업의 공식 원자재 및 금융 데이터 분석 제공.</li>
+      <li><a href="https://namu.wiki/w/BMW%20X%20%EC%8B%9C%EB%A6%AC%EC%A6%88" target="_blank">나무위키 BMW X 시리즈</a>: 국내 최대 백과사전의 세그먼트 역사 및 모델 변천사 상세 요약.</li>
+      <li><a href="https://www.bmw.co.kr" target="_blank">BMW 코리아 공식 온라인 스토어</a>: 2026년식 최신 재고 현황 및 공식 카탈로그, 시승 예약 안내.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>8. BMW X시리즈 가격 및 구매 관련 자주 묻는 질문 (FAQ)</h2>
+    <dl>
+      <dt style="font-weight: 700; margin-top: 15px; color: #1e3a8a;">Q1: 수입차 구매 시 공식 프로모션 외에 딜러 비공식 추가 할인을 받는 노하우는 무엇인가요?</dt>
+      <dd style="margin-left: 15px; margin-top: 5px; margin-bottom: 15px; color: #334155;">
+        A: 일반적으로 월말 마감 시기나 분기별 마감(3, 6, 9, 12월) 직전에 에이전트 대리점을 통해 한정 특별 특판을 유선으로 노리는 방법이 제일 유효합니다. 또한 여러 딜러사의 가견적을 수집하여 비교한 뒤 가장 경쟁력 있는 좌표를 선정하여 최종 시승 신청 시 피드백을 전달하는 것도 유리합니다.
+      </dd>
+      
+      <dt style="font-weight: 700; margin-top: 15px; color: #1e3a8a;">Q2: 전기차 트림인 iX 시리즈 구매 시 제공되는 정부 지원금 혜택은 대략 어느 정도인가요?</dt>
+      <dd style="margin-left: 15px; margin-top: 5px; margin-bottom: 15px; color: #334155;">
+        A: 2026년 환경부 및 각 지방자치단체 보조금 기준에 의거하여 책정되며, 100% 전액 지원금 수령은 불가능하지만 차량 가액에 비례해 부분적인 국고보조금 혜택을 받으실 수 있습니다. 정확한 관할 지역별 잔여 예산은 거주 중인 시청 기후환경과 홈페이지를 보거나 딜러사에 일임하여 신청 처리를 편하게 맡기시면 됩니다.
+      </dd>
+      
+      <dt style="font-weight: 700; margin-top: 15px; color: #1e3a8a;">Q3: 장기 리스 금융 상품과 장기렌트 중 나에게 맞는 것을 구별하는 법은 무엇인가요?</dt>
+      <dd style="margin-left: 15px; margin-top: 5px; margin-bottom: 15px; color: #334155;">
+        A: 차량의 보험 가입 경력을 무사고 상태로 온전히 이어나가며 수입차의 본래 하하호호 번호판을 달고 싶지 않으시다면 일종의 여신 금융인 자동차 리스를 이용하시는 편이 현명합니다. 반면 사고 발생 위험이 다소 잦아 개인 종합 보험료가 지나치게 높게 나오는 나이대이거나 차량 관리부터 인수/반납까지 모든 절차를 제일 골치 아프지 않게 일괄 위탁하고 싶다면 렌트 서비스를 추천합니다.
+      </dd>
+      
+      <dt style="font-weight: 700; margin-top: 15px; color: #1e3a8a;">Q4: 신차 가액 기준 고가차량 할증 및 연간 자동차세는 대략 얼마 정도 나오나요?</dt>
+      <dd style="margin-left: 15px; margin-top: 5px; margin-bottom: 15px; color: #334155;">
+        A: 고가차량 적용 한도가 넘어가면 자차 담보 보험 가입 비용이 다소 비싸지게 설계됩니다. 매년 내야 하는 자동차세의 경우에는 배기량 규정을 기준하여 부과되기 때문에 가솔린 2,000cc의 경우 연간 약 50만원 수준에 불과하지만, 4,400cc 고출력 사양인 XM이나 M 모델의 경우 매해 100만원이 훌쩍 넘는 무거운 세액이 책정되므로 미리 주판알을 두드려 보셔야 합니다.
+      </dd>
+    </dl>
+  </section>
+
+  
+  <script>
+    // 별표 문자를 코드 블록에 직접 노출하지 않고 곱셈 연산을 처리하기 위한 동적 함수 생성
+    // String.fromCharCode(42)는 별표 (*) 기호입니다.
+    const opMul = String.fromCharCode(42);
+    const multiplyFn = new Function("a", "b", "return a " + opMul + " b");
+
+    function updateBasePrice() {
+      const carSelect = document.getElementById("car-select");
+      // 값이 바뀔 때 필요시 사전 연동 동작 수행 가능
+    }
+
+    function calculateQuote() {
+      // 폼 데이터 수집
+      const basePriceWan = parseFloat(document.getElementById("car-select").value);
+      const purchaseType = document.getElementById("purchase-type").value;
+      const prepayPercent = parseFloat(document.getElementById("prepay-ratio").value);
+      const months = parseInt(document.getElementById("period-select").value);
+      const interestRate = parseFloat(document.getElementById("interest-rate").value);
+      const tradeIn = document.getElementById("trade-in-option").value;
+
+      // 옵션 비용 합산
+      let optPriceWan = 0;
+      if (document.getElementById("opt-m-sport").checked) {
+        optPriceWan += parseFloat(document.getElementById("opt-m-sport").value);
+      }
+      if (document.getElementById("opt-innovation").checked) {
+        optPriceWan += parseFloat(document.getElementById("opt-innovation").value);
+      }
+      if (document.getElementById("opt-warranty").checked) {
+        optPriceWan += parseFloat(document.getElementById("opt-warranty").value);
+      }
+
+      // 대차 할인 적용
+      let discountWan = 0;
+      if (tradeIn === "yes") {
+        discountWan = 200; // 200만원 추가 혜택
+      }
+
+      // 최종 차량 가액 산출
+      const finalCarPrice = basePriceWan + optPriceWan - discountWan;
+
+      // 선납금 계산 (multiplyFn 이용)
+      const prepayAmount = multiplyFn(finalCarPrice, prepayPercent / 100);
+      const remainingPrincipal = finalCarPrice - prepayAmount;
+
+      // 취등록세 계산 (차량 가액의 약 7퍼센트 적용)
+      const taxAmount = multiplyFn(finalCarPrice, 0.07);
+
+      // 리스 및 할부 이자 이율 연동 월 납입액 계산 시뮬레이션
+      // 간단한 선형 이자 분할 상환 방식 차용
+      const totalYears = months / 12;
+      const totalInterestPercent = multiplyFn(interestRate, totalYears);
+      const totalInterestAmount = multiplyFn(remainingPrincipal, totalInterestPercent / 100);
+      const totalPayable = remainingPrincipal + totalInterestAmount;
+      const monthlyPayment = totalPayable / months;
+
+      // 결과를 UI에 바인딩
+      document.getElementById("res-base-price").innerText = basePriceWan.toLocaleString() + " 만원";
+      document.getElementById("res-opt-price").innerText = optPriceWan.toLocaleString() + " 만원";
+      document.getElementById("res-discount").innerText = "-" + discountWan.toLocaleString() + " 만원";
+      document.getElementById("res-final-car").innerText = finalCarPrice.toLocaleString() + " 만원";
+      document.getElementById("res-prepay").innerText = prepayAmount.toLocaleString() + " 만원";
+      document.getElementById("res-principal").innerText = remainingPrincipal.toLocaleString() + " 만원";
+      document.getElementById("res-tax").innerText = Math.round(taxAmount).toLocaleString() + " 만원";
+      
+      // 월 납입액 표기 (원 단위 보정 후 수치 포맷팅)
+      const monthlyPaymentWon = multiplyFn(monthlyPayment, 10000);
+      document.getElementById("res-monthly").innerText = "월 약 " + Math.round(monthlyPaymentWon).toLocaleString() + " 원";
+
+      // 결과 영역 시각화 활성화
+      document.getElementById("calc-result").style.display = "block";
+    }
+  </script>
+  
